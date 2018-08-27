@@ -1,0 +1,35 @@
+<table class="table table-dark">
+  <tr>
+    <td>
+      Variables string
+    </td>
+    <td>
+      {{ nombre }}
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      Nombre
+    </td>
+    <td>
+      {{ nombre | uppercase }}
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      Números
+    </td>
+    <td>
+      {{ nota +100}}
+    </td>
+  </tr>
+</table>
+
+<button type="button" class="btn btn-primary" (click)=cambiar_nombre() [disabled]="nombre.length != 0" >
+Cambiar nombre
+</button>
+<br>
+<br>
+<input [(ngModel)]="nombre" type="text" class="form-control" placeholder="Escriba su nombre">
